@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "bazel-*/**": true,
+    "rust-project.json": true
+  },
+  "rust-analyzer.linkedProjects": [
+    "rust-project.json"
+  ]
+}

@@ -15,7 +15,7 @@ rules_rust_dependencies()
 rust_register_toolchains(
     edition = "2021",
     versions = [
-        "1.67.0"
+        "1.67.1",
     ],
 )
 
@@ -27,12 +27,16 @@ load("@rules_rust//crate_universe:defs.bzl", "crate", "crates_repository", "spli
 
 crates_repository(
     name = "crate_index",
-    cargo_lockfile = "//:Cargo.lock",
-    lockfile = "//:Cargo.Bazel.lock",
+    cargo_lockfile = "//:cargo.lock.toml",
+    lockfile = "//:bazel.lock.json",
     packages = {
         "tokio": crate.spec(
+            default_features = False,
+            features = [
+                "rt-multi-thread",
+                "macros",
+            ],
             version = "1.25.0",
-            features = ["full"],
         ),
     },
     splicing_config = splicing_config(

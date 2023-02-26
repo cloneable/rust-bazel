@@ -1,9 +1,11 @@
 {
   "files.exclude": {
     "bazel-*/**": true,
-    "rust-project.json": true
+    "rust-project.json": false
   },
-  "rust-analyzer.linkedProjects": [
-    "rust-project.json"
-  ]
+  "rust-analyzer.check.overrideCommand": null,
+  "rust-analyzer.cargo.buildScripts.overrideCommand": null
+  // "rust-analyzer.linkedProjects": [
+  //   "rust-project.json"
+  // ]
 }

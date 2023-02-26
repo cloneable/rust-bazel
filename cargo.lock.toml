@@ -13,6 +13,7 @@ name = "direct-cargo-bazel-deps"
 version = "0.0.1"
 dependencies = [
  "tokio",
+ "tokio-macros",
 ]
 
 [[package]]

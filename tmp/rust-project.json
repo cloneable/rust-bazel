@@ -255,6 +255,10 @@
                 {
                     "crate": 8,
                     "name": "tokio"
+                },
+                {
+                    "crate": 7,
+                    "name": "tokio_macros"
                 }
             ],
             "is_workspace_member": true,

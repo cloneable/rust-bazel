@@ -1,4 +1,6 @@
-#[tokio::main]
+#[tokio_macros::main]
 async fn main() {
-    println!("hello");
+    tokio::spawn(async move {
+        println!("hello");
+    });
 }

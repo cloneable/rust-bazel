@@ -1,5 +1,5 @@
 {
-  "checksum": "7d6dd28249108e9b2dd0502a974a6569c4ad99ce358690da055d4d3884e2d1e2",
+  "checksum": "43a3a2c0f7325813b4fce202d998ce9ec5bdca75e84fb1d45f66d9a34f4d9f20",
   "crates": {
     "autocfg 1.1.0": {
       "name": "autocfg",
@@ -61,6 +61,15 @@
           "selects": {}
         },
         "edition": "2018",
+        "proc_macro_deps": {
+          "common": [
+            {
+              "id": "tokio-macros 1.8.2",
+              "target": "tokio_macros"
+            }
+          ],
+          "selects": {}
+        },
         "version": "0.0.1"
       },
       "license": null

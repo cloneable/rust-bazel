@@ -38,6 +38,9 @@ crates_repository(
             ],
             version = "1.25.0",
         ),
+        "tokio-macros": crate.spec(
+            version = "1.8.2",
+        ),
     },
     splicing_config = splicing_config(
         resolver_version = "2",

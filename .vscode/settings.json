@@ -3,8 +3,12 @@
     "bazel-*/**": true,
     "rust-project.json": false
   },
+  "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
   "rust-analyzer.check.overrideCommand": null,
-  "rust-analyzer.cargo.buildScripts.overrideCommand": null
+  "rust-analyzer.cargo.buildScripts.overrideCommand": null,
+  "rust-analyzer.diagnostics.enable": true,
+  "rust-analyzer.diagnostics.experimental.enable": true,
+  "rust-analyzer.procMacro.attributes.enable": true,
   // "rust-analyzer.linkedProjects": [
   //   "rust-project.json"
   // ]

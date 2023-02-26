@@ -1,23 +1,9 @@
-$ ~/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rust-analyzer --version
-rust-analyzer 1.67.1 (d5a82bbd 2023-02-07)
-$ RA_LOG=rust_analyzer=info ~/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rust-analyzer diagnostics .
+$ $(rustc +nightly --print sysroot)/bin/rust-analyzer --version
+rust-analyzer 1.69.0-nightly (34e6673a 2023-02-25)
+$ RA_LOG=rust_analyzer=info $(rustc +nightly --print sysroot)/bin/rust-analyzer diagnostics .
 [INFO rust_analyzer::reload] Loaded proc-macros for /private/var/tmp/_bazel_fb/6eced65e9af35df66fe54d4e4c82cece/execroot/rust-bazel/bazel-out/darwin_arm64-opt-exec-2B5CBBC6/bin/external/crate_index__tokio-macros-1.8.2/libtokio_macros-2565194975.dylib: ["main", "main_rt", "test", "test_rt", "main_fail", "test_fail", "select_priv_declare_output_enum", "select_priv_clean_pattern"]
 processing crate: example, module: /Users/fb/Workspaces/rust/rust-bazel/crates/example/src/main.rs
-Diagnostic { code: DiagnosticCode("unresolved-macro-call"), message: "unresolved macro `tokio::main`", range: 0..14, severity: Error, unused: false, experimental: true, fixes: None }
-
-diagnostic scan complete
-
-[ERROR rust_analyzer] Unexpected error: diagnostic error detected
-diagnostic error detected
-
----
-
-$ /Users/fb/.vscode/extensions/rust-lang.rust-analyzer-0.3.1410-darwin-arm64/server/rust-analyzer --version
-rust-analyzer 0.3.1410-standalone (a6603fc21 2023-02-16)
-$ RA_LOG=rust_analyzer=info /Users/fb/.vscode/extensions/rust-lang.rust-analyzer-0.3.1410-darwin-arm64/server/rust-analyzer diagnostics .
-[INFO rust_analyzer::reload] Loaded proc-macros for /private/var/tmp/_bazel_fb/6eced65e9af35df66fe54d4e4c82cece/execroot/rust-bazel/bazel-out/darwin_arm64-opt-exec-2B5CBBC6/bin/external/crate_index__tokio-macros-1.8.2/libtokio_macros-2565194975.dylib: ["main", "main_rt", "test", "test_rt", "main_fail", "test_fail", "select_priv_declare_output_enum", "select_priv_clean_pattern"]
-processing crate: example, module: /Users/fb/Workspaces/rust/rust-bazel/crates/example/src/main.rs
-Diagnostic { code: DiagnosticCode("unresolved-macro-call"), message: "unresolved macro `tokio::main`", range: 0..14, severity: Error, unused: false, experimental: true, fixes: None }
+Diagnostic { code: DiagnosticCode("unresolved-macro-call"), message: "unresolved macro `tokio_macros::main`", range: 0..21, severity: Error, unused: false, experimental: true, fixes: None }
 
 diagnostic scan complete
 
